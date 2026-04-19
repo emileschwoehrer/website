@@ -1,0 +1,113 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: IBM Plex Sans, arial;
+  background-color: whitesmoke;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+main {
+  padding: 8px 12px 12px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.link {
+  text-decoration: underline;
+  color: black;
+}
+
+.container,
+img {
+  max-width: 1000px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.text-a-propos {
+  font-size: 24px;
+  font-weight: 450;
+  line-height: 32px;
+}
+
+.alinea {
+  text-indent: 20px;
+  margin-top: 18px;
+}
+
+.contact,
+.book-cv {
+  margin-top: 18px;
+}
+
+.book-cv {
+  margin-bottom: 20px;
+}
+
+#mailto-link,
+#insta-link {
+  display: block;
+  margin-left: 20px;
+  text-decoration: underline;
+  color: black;
+}
+
+#book-link,
+#cv-link {
+  text-decoration: underline;
+  color: black;
+}
+
+.credits {
+  font-size: 14px;
+}
+
+.title {
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.type,
+.brief {
+  margin-left: 12px;
+}
+
+.nature {
+  font-style: italic;
+}
+
+/* responsive */
+@media (max-width: 755px) {
+
+  .text-a-propos {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}

@@ -1,0 +1,25 @@
+footer {
+  margin: 0;
+  font-family: IBM Plex Sans, arial;
+  padding: 12px;
+  position: relative;
+  z-index: 10;
+  background-color: yellow;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.mail-link, .instagram-link {
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  margin-left: 8px;
+}
+
+.mail-link:hover, .instagram-link:hover {
+  text-decoration: underline;
+}

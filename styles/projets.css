@@ -1,0 +1,115 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: IBM Plex Sans, arial;
+  background-color: whitesmoke;
+}
+
+main {
+  padding: 12px;
+}
+
+h1, p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 14px;
+}
+
+.img-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-bottom: 4px;
+}
+
+.img-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.context {
+  font-size: 14px;
+}
+
+.title {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: yellow;
+}
+
+.footer-bar {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 8px 12px;
+}
+
+.footer-bar img {
+  height: 26px;
+  display: block;
+}
+
+.arrows {
+  display: flex;
+}
+
+.close,
+.right-arrow,
+.left-arrow {
+  cursor: pointer;
+}
+
+.left-arrow {
+  margin-right: 24px;
+}
+
+.type, .brief {
+  margin-left: 12px;
+}
+
+.nature {
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+sup {
+  line-height: 70%;
+  font-size: 70%;
+}
+
+.brief {
+  line-height: 18px;
+  max-width: 880px;
+}
+
+.link {
+  text-decoration: underline;
+  color: black;
+}
+
+.hamburger {
+  cursor: pointer;
+}

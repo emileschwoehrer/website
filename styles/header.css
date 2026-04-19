@@ -1,0 +1,134 @@
+header {
+  margin: 0;
+  font-family: IBM Plex Sans, arial;
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: yellow;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.name, .categorie {
+  text-decoration: none;
+  color: black;
+}
+
+.name:hover, .categorie:hover {
+  text-decoration: underline;
+}
+
+.current-page {
+  text-decoration: underline;
+  color: black;
+  margin-left: 8px;
+}
+
+.categorie {
+  margin-left: 8px;
+}
+
+/* hamburger */
+.hamburger {
+  display: none;
+  width: 28px;
+  height: 18px;
+  position: relative;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 400;
+}
+
+.hamburger span {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: black;
+  left: 0;
+  top: 50%;
+  transform-origin: center;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* positions de base */
+.hamburger span:nth-child(1) {
+  transform: translateY(-7px);
+}
+
+.hamburger span:nth-child(2) {
+  transform: translateY(0);
+}
+
+.hamburger span:nth-child(3) {
+  transform: translateY(7px);
+}
+
+/* animation → croix parfaite */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* overlay */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(245 , 245, 245, 0.2);
+  z-index: 200;
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+/* responsive */
+@media (max-width: 755px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .rubrique {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: whitesmoke;
+    padding: 12px;
+    padding-bottom: 0;
+    z-index: 300;
+  }
+
+  .rubrique a {
+    padding: 12px 0;
+    border-top: 0.5px solid black;
+    font-size: 14px;
+    margin-left: 0;
+  }
+
+  .rubrique.open::after {
+    content: "";
+    display: block;
+    border-bottom: 0.5px solid black;
+  }
+
+  .rubrique.open {
+    display: flex;
+  }
+}
