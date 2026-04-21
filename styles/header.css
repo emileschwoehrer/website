@@ -87,7 +87,7 @@ header {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(245 , 245, 245, 0.2);
+  background: rgba(245 , 245, 245, 0.3);
   z-index: 200;
 }
 

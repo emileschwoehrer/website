@@ -8,12 +8,41 @@ const j = Math.floor(Math.random() * (i + 1));
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".container");
+  const select = document.getElementById("favoriteOnly");
+
+  function shuffleImages() {
   let blocks = Array.from(document.querySelectorAll(".picture"));
-  shuffleArray(blocks);
-  container.innerHTML = "";
+
+  // petit effet visible
   blocks.forEach(block => {
-    container.appendChild(block);
-    block.style.opacity = "1";
+    block.style.transform = "translateY(12px)";
+  });
+
+  setTimeout(() => {
+    shuffleArray(blocks);
+
+    container.innerHTML = "";
+    blocks.forEach(block => {
+      container.appendChild(block);
+    });
+
+    // retour à la normale
+    requestAnimationFrame(() => {
+      blocks.forEach(block => {
+        block.style.transform = "translateY(0)";
+        block.style.opacity = "1";
+      });
+    });
+
+  }, 120);
+}
+
+  // Shuffle au chargement
+  shuffleImages();
+
+  // 🔥 Shuffle quand on change le select
+  select.addEventListener("change", () => {
+    shuffleImages();
   });
 });
 
