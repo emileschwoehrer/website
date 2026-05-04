@@ -32,7 +32,7 @@ h1, h2, p {
 
 .grid {
   display: grid;
-  gap: 6px 12px;
+  gap: 12px;
   grid-template-columns: 1fr;
 }
 
