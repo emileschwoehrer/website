@@ -1,6 +1,34 @@
 const logo = document.getElementById("logo");
 const container = document.querySelector(".img-background");
 
+const images = [
+  "pictures/anim-logo/logo-origin.svg",
+  "pictures/anim-logo/logo-clown-face.svg",
+  "pictures/anim-logo/logo-diagonal-mouth.svg",
+  "pictures/anim-logo/logo-frowning-face.svg",
+  "pictures/anim-logo/logo-kissing-face.svg",
+  "pictures/anim-logo/logo-open-mouth.svg",
+  "pictures/anim-logo/logo-rolling-eyes.svg",
+  "pictures/anim-logo/logo-smirking-face.svg",
+  "pictures/anim-logo/logo-upside-down-face.svg",
+  "pictures/anim-logo/logo-winking-face.svg",
+  "pictures/anim-logo/logo-zany-face.svg",
+  "pictures/anim-logo/logo-zipper-mouth-face.svg",
+];
+
+let currentIndex = 0;
+
+logo.addEventListener("click", () => {
+  let randomIndex;
+
+  do {
+    randomIndex = Math.floor(Math.random() * images.length);
+  } while (randomIndex === currentIndex || randomIndex === 0);
+
+  currentIndex = randomIndex;
+  logo.src = images[currentIndex];
+});
+
 let x = 0;
 let y = 0;
 

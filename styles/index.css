@@ -64,7 +64,8 @@ a:hover {
   width: clamp(120px, 25vw, 400px);
   height: auto;
   user-select: none;
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 body.no-scroll {
