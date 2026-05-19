@@ -43,7 +43,7 @@ main {
   transition: transform 0.15s ease;
 }
 
-.picture img {
+.picture img, video {
   width: 100%;
   height: auto;
   display: block;
@@ -58,12 +58,13 @@ main {
 }
 
 #favoriteOnly {
-  width: 104px;
+  width: 112px;
   background-color: yellow;
   border-style: solid;
   border-radius: 0;
   border-width: 1px;
   border-color: black;
+  font-size: 14px;
 }
 
 select {
@@ -87,4 +88,12 @@ select {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+/* responsive */
+@media (max-width: 576px) {
+  #favoriteOnly,#phrase {
+    font-size: 14px;
+    width: 110px;
+  }
 }
