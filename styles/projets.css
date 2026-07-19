@@ -72,14 +72,15 @@ h1, p {
   display: block;
 }
 
-.arrows {
-  display: flex;
+.close,
+.next-project {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
-.close,
-.right-arrow,
-.left-arrow {
-  cursor: pointer;
+.next-project:hover {
+  text-decoration: underline;
 }
 
 .left-arrow {
