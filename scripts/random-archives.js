@@ -39,11 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Shuffle au chargement
   shuffleImages();
-
-  // 🔥 Shuffle quand on change le select
-  select.addEventListener("change", () => {
-    shuffleImages();
-  });
 });
 
 if ("scrollRestoration" in history) {
